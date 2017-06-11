@@ -4,70 +4,135 @@ downloads: ~/.ansible-downloads/
 configure_dotfiles: yes
 configure_sudoers: yes
 configure_terminal: yes
-configure_osx: yes
+configure_osx: no
 
-dotfiles_repo: https://github.com/geerlingguy/dotfiles.git
+dotfiles_repo: https://github.com/benjaminran/dotfiles.git
 dotfiles_repo_accept_hostkey: yes
-dotfiles_repo_local_destination: ~/Dropbox/Development/GitHub/dotfiles
+dotfiles_repo_local_destination: ~/dev/dotfiles
 dotfiles_files:
   - .bash_profile
-  - .gitignore
-  - .inputrc
-  - .osx
-  - .vimrc
+  - .bashrc
+  - .gitconfig
+  - .spacemacs
 
 homebrew_installed_packages:
   # - ansible # Installed via Pip.
+  - aspell
   - autoconf
+  - autojump
+  - automake
   - bash-completion
   - chromedriver
+  - cloc
+  - coreutils
+  - cowsay
+  - cscope
+  - csv-fix
   - doxygen
+  - emacs-plus
+  - ffmpeg
+  - flake8
+  - gawk
+  - gcc
+  - gdb
   - gettext
   - gifsicle
   - git
+  - gnu-sed
+  - go
   - go
   - gpg
-  - hub
+  #- gradle
+  - groff
+  - gs
+  - htop
   - httpie
+  - hub
+  - imagemagick
   - iperf
+  - iproute2mac
+  - jenv
+  - jq
   - libevent
-  - sqlite
+  - markdown
+  #- maven
+  #- maven-completion
   - mcrypt
+  - md5sha1sum
+  - mongodb
+  - mtr
   - nmap
   - node
+  - node
   - nvm
-  - ssh-copy-id
-  - cowsay
-  - readline
   - openssl
+  - openssl
+  - pandoc
+  - parallel
+  - postgresql
   - pv
+  - python
+  - readline
+  - redis
+  - rlwrap
+  - shellcheck
+  - sqlite
+  - sqlite
+  - ssh-copy-id
+  - supervisor
+  - tesseract
+  - texinfo
+  - tmux
   - wget
   - wrk
+  - yank
+  - yarn
+  - youtube-dl
 
 homebrew_taps:
-  - homebrew/core
   - caskroom/cask
+  - d12frosted/emacs-plus
+  - homebrew/core
   - homebrew/php
 
 homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
+  - dash
   - docker
   - dropbox
-  # - fing # Download link keeps getting changed, d'oh!
+  - evernote
+  #- fing # Download link keeps getting changed, d'oh!
   - firefox
+  - flux
+  - github-desktop
   - google-chrome
+  - google-drive
   - handbrake
+  - intellij-idea
+  - iterm2
+  - java
+  - kindle
+  - lastpass
   - licecap
   - limechat
+  #- mactex
   - macvim
   - nvalt
+  - postman
+  - pycharm
   - sequel-pro
+  - skim
   - skitch
+  - skype
   - slack
+  - sourcetree
+  - spotify
   - sublime-text
   - transmit
   - vagrant
   - virtualbox
+  - webstorm
+  - wireshark
 
 # See `geerlingguy.mas` role documentation for usage instructions.
 mas_installed_apps: []
@@ -91,7 +156,10 @@ npm_packages: []
   # - name: webpack
   #   state: present # present/absent/latest, default: present
   #   version: "^2.6" # default: N/A
-pip_packages: []
+pip_packages:
+  - name: awscli
+  - name: csvkit
+  - name: virtualenv
   # - name: mkdocs
   #   state: present # present/absent/latest, default: present
   #   version: "0.16.3" # default: N/A
